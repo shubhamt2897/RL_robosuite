@@ -1,5 +1,6 @@
 import os
-# Force software rendering for MuJoCo (must be set BEFORE importing robosuite)
+# Force software rendering for OpenGL and MuJoCo
+os.environ["PYOPENGL_PLATFORM"] = "osmesa"
 os.environ["MUJOCO_GL"] = "osmesa"
 
 import time
